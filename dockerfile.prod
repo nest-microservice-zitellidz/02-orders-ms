@@ -14,8 +14,8 @@ RUN npm install
 # Builder - Construye la aplicación
 FROM node:21-alpine3.19 as build
 
-ARG ORDERS_DATABASE_URL
-ENV DATABASE_URL=$ORDERS_DATABASE_URL
+ARG POSTGRES_ORDERS_HOST
+ENV DATABASE_URL=$POSTGRES_ORDERS_HOST
 
 WORKDIR /usr/src/app
 
